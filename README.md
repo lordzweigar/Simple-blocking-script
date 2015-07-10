@@ -1,1 +1,3 @@
-# Simple-blocking-script
+# Hosts editing script
+
+put wherever you put your scripts
