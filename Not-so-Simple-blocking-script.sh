@@ -1,31 +1,4 @@
-# Handy blocking script
-# I should have used getopts but i'm too lazy
-
-# function block()
-# if [ $1 -n  ] && [ $2 -z ] ; then
-
-#     echo 'blocked' $1 && sudo echo  "127.0.0.1  $1" >> /etc/hosts && sudo systemctl restart nscd
-# elif [ -n $2   ]   ; then
-
-#     echo 'blocked' $1 && sudo echo  "$1 $2" >> /etc/hosts && sudo systemctl restart nscd
-
-# else
-#     echo  'Successfully blocked nothing'
-# fi
-
-# function unblock()
-# if [ -n $1 ] ; then
-#     echo 'unblocked' $1 && sudo sed -i '/$1/d' /etc/hosts  && sudo systemctl restart nscd
-# else
-#     echo  'Successfully unblocked nothing'
-# fi
-# # swap is used to allow for blocking (or redirecting) regardless of the below
-# # at some point i may implement this with a --global block option or something
-# alias unblockall="sudo swap /etc/hosts /etc/hosts-slave && sudo systemctl restart nscd"
-# alias   blockall="sudo swap /etc/hosts-slave /etc/hosts && sudo systemctl restart nscd"
-
-
-
+# le blocking script
 function swap() {
     # Swap 2 filenames around, if they exist (from Uzi's bashrc).
     local TMPFILE=tmp.$$
